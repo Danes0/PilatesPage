@@ -1,0 +1,645 @@
+@charset "UTF-8";
+/* Set the UTF-8 character encoding */
+
+/* Base style to reset margins and fill boxes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/**************************Header section***************************/
+
+/* Styles for the header, including the logo and navigation bar */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #8eb2bb;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header .header-container {
+    display: flex;
+    align-items: center;
+}
+
+#header .logo {
+    width: 100px;
+    margin-right: 50px;
+}
+
+/* Styles for the navigation bar */
+#navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+    display: inline;
+    margin-right: 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #33707f;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #33707f;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+/*Search section style*/
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #33707f;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(73, 113, 133);
+}
+
+/****************************Login page****************************/
+/* Styles for the register form container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Styles for the login & register page title */
+.login-container h1,
+.register-container h1 {
+    text-align: center;
+    color: #33707f;
+    margin-bottom: 20px;
+}
+
+/* Styles for the login form */
+.login-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-form button[type="submit"],
+.register-form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #33707f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button[type="submit"]:hover,
+.register-form button[type="submit"]:hover {
+    background-color: #1d5a6f;
+}
+
+/* Styles for the login form message and link */
+.login-form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-form a {
+    color: #33707f;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/**************************Register Form****************************/
+/* Styles for the register form container */
+.register-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+/* Styles for the register form */
+.register-form form {
+    display: grid;
+    gap: 20px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="tel"],
+.register-form input[type="date"],
+.register-form select,
+.register-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.register-form select {
+    padding: 10px;
+}
+
+/**************************My Account page****************************/
+/* Styles for the profile container */
+.profile-container {
+    padding: 80px;
+    background-image: url(../images/background_img.png);
+}
+
+.profile-container h2 {
+    color: #33707f;
+    margin-bottom: 70px;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* Styles for the profile info container */
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #c8e6e5cf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+/* Styles for the left profile info */
+.profile-left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Images Styles */
+.imgProfile img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 30px;
+    border: 4px solid #33707f;
+}
+
+/* Message Styles */
+#statusMessage {
+    color: #1b4752;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Styles for file input field, uploap button and delete button */
+.upload-img {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.upload-img label,
+.upload-img button {
+    width: 100%;
+    text-align: center;
+}
+
+.choose-file-button input[type="file"] {
+    display: none;
+}
+
+.choose-file-button i,
+.edit-button,
+.delete_reservation {
+    color: #33707f;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+}
+
+.choose-file-button {
+    text-align: center;
+}
+
+.choose-file-button i:hover,
+.edit-button:hover,
+.delete_reservation:hover {
+    color: #54838f;
+}
+
+.upload-button,
+.delete-button {
+    background-color: #33707f;
+    color: #fff;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 10px;
+}
+
+.upload-button:hover {
+    background-color: #156a7f;
+}
+
+.delete-button {
+    background-color: #6c020c;
+}
+
+.delete-button:hover {
+    background-color: #a10010;
+}
+
+/* Style for right profile */
+.profile-right {
+    width: 45%;
+    padding-top: 30px;
+}
+
+.edit-form {
+    display: flex;
+}
+
+/* Title and paragraph style */
+.profile-right h3 {
+    padding-bottom: 30px;
+    color: #33707f;
+    font-size: 25px;
+}
+
+.user-info h6 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 140px;
+    color: #3d4b4f;
+}
+
+.profile-right p {
+    padding-bottom: 8px;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/*  Buttons & input field style */
+.edit-button {
+    font-size: 16px;
+}
+
+.input-field {
+    padding: 5px 3px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-button,
+.cancel-button {
+    padding: 7.7px 10px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.save-button {
+    background-color: #4cafa2;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #65b5aa;
+}
+
+.cancel-button {
+    background-color: #9a0101;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #993c3c;
+}
+
+/**************************Reservations****************************/
+/* Reservations container style */
+.reservations-container {
+    align-items: center;
+}
+
+.reservations-container h3 {
+    color: #ffffff;
+    font-size: 27px;
+    text-align: center;
+    background-color: #33707f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    margin: 120px;
+    padding: 20px;
+}
+
+.class-reservations {
+    background-color: #c1d7dfcf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 50px auto;
+    padding: 30px;
+}
+
+/* Styles for the reservation table */
+.show-reservations {
+    padding: 20px 200px;
+}
+
+.show-reservations table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.show-reservations th,
+.show-reservations td {
+    padding: 6px;
+    text-align: center;
+}
+
+.show-reservations th {
+    background-color: #33707f;
+    color: #fff;
+    font-size: 18px;
+}
+
+.show-reservations tbody tr:nth-child(even) {
+    background-color: #c1d7dfcf;
+}
+
+.show-reservations tbody tr:hover {
+    background-color: #9ac2cd;
+}
+
+/* Styles for the add reservation form */
+.add_reservation {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #669caa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.add_reservation h4 {
+    color: #fdfdfd;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.add_reservation label {
+    margin-right: 5px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.add_reservation input,
+.add_reservation select {
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add_reservation button {
+    background-color: #33707f;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.add_reservation button:hover {
+    background-color: #1d5a6f;
+}
+
+/* Log Out style */
+.logout-button {
+    float: right;
+    margin-top: 20px;
+}
+
+.logout-button button {
+    background-color: #33707f;
+    color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button button:hover {
+    background-color: #1d5a6f;
+}
+
+/****************************Footer****************************/
+footer {
+    background-color: #7db1be9f;
+    color: #000000;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Styles applied to columns in the footer */
+footer .col1,
+footer .col2,
+footer .col3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+footer .col2,
+footer .col3 {
+    padding-top: 19px;
+}
+
+footer .col2 {
+    width: 330px;
+}
+
+/* Styles applied to the logo */
+footer .logo {
+    width: 140px;
+    height: auto;
+}
+
+/* General styles for links and social networks */
+footer .icon i {
+    padding-right: 13px;
+    cursor: pointer;
+    color: #294452;
+}
+
+footer .icon i:hover,
+footer a:hover {
+    color: #41697d;
+}
+
+/* General styles for texts */
+.col1 h4 {
+    margin-top: 10px;
+}
+
+footer h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #00596f;
+}
+
+footer p,
+footer a {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Styles for the Newsletter Signup section */
+footer .newsletter {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px 30px;
+    width: 400px;
+}
+
+footer .newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .newsletter input[type="email"] {
+    padding: 8px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+footer .newsletter button[type="submit"] {
+    padding: 8px 20px;
+    margin-top: 35px;
+    background-color: #1f5174;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+footer .newsletter button[type="submit"]:hover {
+    background-color: #32668a;
+}
+
+/* Styles for the "copyright" section */
+footer .copyright {
+    width: 100%;
+}
+
+/* PopUp Style*/
+.custom-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f5174;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.custom-popup p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.custom-popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+footer .copyright p {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
