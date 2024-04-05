@@ -1,2 +1,2 @@
 # PilatesPage
-This project simulates a Pilates website focusing on the "My Account" tab, where users can register or log in to access various personal functions.
+This project simulates a Pilates website focusing on the "My Account" tab, where users can register or log in to access various personal functions. Once inside, they can view and edit their personal information, upload or change a profile picture, and manage their Pilates class reservations, including the ability to create new bookings or cancel existing ones. Developed using HTML, CSS, JavaScript, and PHP along with MySQL.
